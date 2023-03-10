@@ -1,0 +1,13 @@
+@import '../../styles/settings.scss';
+
+.columnForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;    
+  };
+
+  span {
+    margin:0 10px;
+  }
