@@ -13,7 +13,7 @@ const ColumnForm = (props) => {
     const [icon, setIcon] = useState('');
 
   
-    const handleSubmit = e => {
+    const handleSubmit = (e)=> {
         e.preventDefault();
         dispatch({ type: 'ADD_COLUMN', payload: { title, icon } });
         setTitle('');
