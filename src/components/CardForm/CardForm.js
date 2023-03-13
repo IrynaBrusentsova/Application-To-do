@@ -4,6 +4,7 @@ import Button from './../Button/Button';
 import TextInput from './../TextInput/TextInput';
 // new
 import { useDispatch } from 'react-redux';
+import { addCard } from '../../redux/store';
 
 
 const CardForm = props => {
@@ -18,12 +19,18 @@ const CardForm = props => {
 
  
     // new
-        const handleSubmit = e => {
+    //     const handleSubmit = e => {
+    //     e.preventDefault();
+    //     dispatch({ type: 'ADD_CARD', payload: { title, columnId} });
+    //     setTitle('');   
+    //  };
+
+     const handleSubmit = e => {
         e.preventDefault();
-        dispatch({ type: 'ADD_CARD', payload: { title, columnId} });
+        dispatch(addCard({ title, columnId }));
         setTitle('');   
      };
-
+     
     return (
         <form className={styles.cardForm} onSubmit={handleSubmit}>
             <TextInput value={title} onChange={e => setTitle(e.target.value)} />
