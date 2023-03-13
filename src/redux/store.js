@@ -20,6 +20,7 @@ export const addCard =  payload => ({type: 'ADD_CARD', payload}) ;
 export const updateSearch = payload => ({type: 'UPDATE_SEARCHSTRING', payload});
 
 
+
   const reducer = (state, action) => {
     switch(action.type) {
       case 'ADD_COLUMN':
@@ -33,7 +34,7 @@ export const updateSearch = payload => ({type: 'UPDATE_SEARCHSTRING', payload});
         return state;
     }
   };
-  
+
 
 const store = createStore(
   reducer,

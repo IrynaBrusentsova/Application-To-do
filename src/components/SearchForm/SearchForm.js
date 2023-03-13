@@ -14,17 +14,17 @@ const SearchForm = () => {
     const dispatch = useDispatch();
    
     
-      // const handleSubmit = e => {
-      //    e.preventDefault();
-      //    dispatch({ type: 'UPDATE_SEARCHSTRING', payload: searchLet});
-      //    setSearchLet('');   
-      // };
-
       const handleSubmit = e => {
-        e.preventDefault();
-        dispatch(updateSearch({ searchLet }));
-        setSearchLet('');   
-     };
+         e.preventDefault();
+         dispatch({ type: 'UPDATE_SEARCHSTRING', payload: searchLet});
+         setSearchLet('');   
+      };
+
+    //   const handleSubmit = e => {
+    //     e.preventDefault();
+    //      dispatch(updateSearch({ searchLet }));
+    //     setSearchLet('');   
+    //  };
 
     return (
         <form onSubmit ={handleSubmit} className={styles.searchForm}>
