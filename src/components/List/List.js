@@ -10,9 +10,6 @@ import {getAllColumns} from '../../redux/store';
 const List = () => {
 	const columns = useSelector(getAllColumns);
 
-	//  const columns = useSelector(state => state.columns);
-	 
-
 	return (
 		<div className={styles.list}>
 		  <header className={styles.header}>
