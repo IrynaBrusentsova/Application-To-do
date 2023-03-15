@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styles from "./NavBar.module.scss";
 
 
@@ -12,15 +13,12 @@ const NavBar = () => {
              <span className="fa fa-tasks"></span>
            </div>
             
-        <ul>
-            <li><a href="/about">Home</a></li>
-            <li>Home</li>
-            <li>Favorite</li>
-            <li>About</li>
-        </ul>
-     
+          <ul>
+            <li> <NavLink to="/" > Home</NavLink> </li>
+            <li> <NavLink to="/about" >About</NavLink> </li>
+            <li> <NavLink to="/favorite" >Favorite</NavLink> </li>               
+          </ul>
         </div>
-
       </div>
     </nav>
   );

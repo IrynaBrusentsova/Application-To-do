@@ -21,11 +21,13 @@ li {
 
 a {
   color: white;
+  text-decoration: none;
+
 }
 
-.linkActive {
-  color: $color-warning;
-}
+// .linkActive {
+//   color: $color-warning;
+// }
 
 .container {
   padding: 10px 20px;
