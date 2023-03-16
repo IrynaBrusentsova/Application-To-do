@@ -14,6 +14,12 @@ export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
 export const addCard =  payload => ({type: 'ADD_CARD', payload}) ;
 export const updateSearch = payload => ({type: 'UPDATE_SEARCHSTRING', payload});
 
+// 14.2
+export const getListById = ({ lists }, listId) => lists.find(list => list.id === listId);
+
+
+export const getColumnsByList = ({ columns }, listId) => columns.filter((column) => column.listId === listId);
+
 
   const reducer = (state, action) => {
     switch(action.type) {
@@ -35,5 +41,6 @@ const store = createStore(
   initialState,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
+
 
 export default store;

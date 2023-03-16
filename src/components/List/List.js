@@ -6,8 +6,15 @@ import { useSelector } from 'react-redux';
 
 // 13.6
 import {getAllColumns} from '../../redux/store';
+// 14.2 
+import {getListById} from '../../redux/store';
+import {getColumnsByList} from '../../redux/store';
 
 const List = () => {
+	const  listId  = 1;
+	const listData = useSelector(state => getListById(state, listId));
+	//  const columns = useSelector(state => getColumnsByList(state, listId));
+
 	const columns = useSelector(getAllColumns);
 
 	return (
