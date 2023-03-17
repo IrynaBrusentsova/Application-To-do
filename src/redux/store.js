@@ -20,14 +20,17 @@ export const getListById = ({ lists }, listId) => lists.find(list => list.id ===
 
 export const getColumnsByList = ({ columns }, listId) => columns.filter((column) => column.listId === listId);
 
+export const getAllLists = (state) => state.lists;
 
   const reducer = (state, action) => {
     switch(action.type) {
       case 'ADD_COLUMN':
         return { ...state, columns: [...state.columns, { ...action.payload, id: shortid() }]};
+
       case 'ADD_CARD':  
         return { ...state, cards: [...state.cards, { ...action.payload, id: shortid() }]};
-        case 'UPDATE_SEARCHSTRING':
+
+      case 'UPDATE_SEARCHSTRING':
           return { ...state, searchString: action.payload };
 
       default:
