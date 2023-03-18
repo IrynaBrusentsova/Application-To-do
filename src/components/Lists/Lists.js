@@ -3,6 +3,7 @@ import {getAllLists} from '../../redux/store';
 import { useParams } from "react-router";
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import ListForm from '../ListForm/ListForm';
 
 const Lists = () => {
     const { listId } = useParams();
@@ -17,13 +18,11 @@ const Lists = () => {
               <p>{list.description}</p>
             </Link>
           ))}
+           <ListForm />
         </section>
       );
 	
-
-
 };
-
 
 export default Lists;
 

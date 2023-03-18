@@ -17,10 +17,11 @@ export const updateSearch = payload => ({type: 'UPDATE_SEARCHSTRING', payload});
 // 14.2
 export const getListById = ({ lists }, listId) => lists.find(list => list.id === listId);
 
-
 export const getColumnsByList = ({ columns }, listId) => columns.filter((column) => column.listId === listId);
 
 export const getAllLists = (state) => state.lists;
+export const addList = payload => ({type: 'ADD_LIST', payload})
+
 
   const reducer = (state, action) => {
     switch(action.type) {
@@ -32,6 +33,11 @@ export const getAllLists = (state) => state.lists;
 
       case 'UPDATE_SEARCHSTRING':
           return { ...state, searchString: action.payload };
+          
+       case 'ADD_LIST':
+            return{ ...state,
+              lists: [...state.lists, {...action.payload, id: shortid()}]
+            };
 
       default:
         return state;
