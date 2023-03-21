@@ -19,8 +19,7 @@ console.log('Column render');
                 {cards.map(card => 
                 <Card key={card.id} title={card.title} />)}    
                 <CardForm columnId={props.id} action={props.action} />   
-            </ul>
-            
+            </ul>    
         </article>
     );
 

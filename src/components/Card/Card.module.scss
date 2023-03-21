@@ -11,3 +11,33 @@
     justify-content: space-between;
     font-weight: bold;
 }
+
+// ==
+.star_button {
+    color: $color-dark;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    font-size: 20px;
+  }
+  
+  .remove_button {
+    color: $color-dark;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    font-size: 20px;
+  }
+  
+  .active {
+    color: $color-warning;
+  }
+  
+  .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
