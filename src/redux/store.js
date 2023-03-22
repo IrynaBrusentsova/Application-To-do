@@ -7,7 +7,7 @@ import columnsReducer from "./columnsReducer";
 import cardsReducer from "./cardsReducer";
 import searchStringReducer from "./searchStringReducer";
 
- 
+
   // const reducer = (state, action) => {
   //   switch(action.type) {
   //     // case 'ADD_COLUMN':
