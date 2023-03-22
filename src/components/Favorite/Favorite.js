@@ -1,6 +1,5 @@
 // import styles from "./Favorite.module.scss"
-
-// const Favorite = ()=> {
+//const Favorite = ()=> {
      
 //     return(
 //         <div>

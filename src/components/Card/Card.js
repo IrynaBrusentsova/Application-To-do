@@ -1,16 +1,3 @@
-// import styles from './Card.module.scss';
-// import clsx from "clsx"; 
-// import { useDispatch } from "react-redux"; 
-
-
-// const Card = props => {
-//     return (
-//         <li className={styles.card}>{props.title}</li>   
-//     );
-// };
-// export default Card;
-
-// ===
 
 import styles from "./Card.module.scss"; 
 import { useDispatch } from "react-redux"; 
@@ -38,9 +25,8 @@ const Card = (props) => {
                     <span className="fa fa-star-o" /> 
                     </button>
                     
-                    
                     {/* <button onClick={remove} className={clsx(styles.remove_button, props.isFavorite && styles.active)}>  </button> */}
-                    <span className="fa fa-trash" /> 
+                    {/* <span className="fa fa-trash" />  */}
                     
                 </div> 
             </div> 

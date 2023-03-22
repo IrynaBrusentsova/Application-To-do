@@ -1,3 +1,5 @@
+import shortid from "shortid";
+
 
 
 const columnsReducer = (statePart = [], action) => {
@@ -8,3 +10,5 @@ const columnsReducer = (statePart = [], action) => {
         return statePart;
     }
   }
+
+  export default columnsReducer;
