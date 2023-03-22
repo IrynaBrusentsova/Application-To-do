@@ -4,7 +4,7 @@ import Button from './../Button/Button';
 import TextInput from './../TextInput/TextInput';
 // new
 import { useDispatch } from 'react-redux';
-import { addCard } from '../../redux/store';
+import { addCard } from '../../redux/cardsReducer';
 
 
 const CardForm = props => {

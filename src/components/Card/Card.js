@@ -1,7 +1,7 @@
 
 import styles from "./Card.module.scss"; 
 import { useDispatch } from "react-redux"; 
-import { toggleCardFavorite, removeCard } from "../../redux/store"; 
+import { toggleCardFavorite, removeCard } from "../../redux/cardsReducer"; 
 import clsx from "clsx"; 
  
 const Card = (props) => { 
@@ -10,10 +10,11 @@ const Card = (props) => {
     const toggle = () => { 
         dispatch(toggleCardFavorite(props.id)); 
     }; 
-    // const remove = () => {
-    //     console.log("removing card with id:", props.id);
-    //     dispatch(removeCard(props.id));
-    // }
+    const remove = () => {
+        const payload = props.id;
+        dispatch(removeCard(payload));
+        console.log("removing card with id:", props.id);        
+    }
  
     return ( 
         <li className={styles.card}> 
@@ -21,14 +22,15 @@ const Card = (props) => {
                 <div>{props.title} 
                 </div> 
                 <div> 
-                    <button onClick={toggle} className={clsx(styles.button, props.isFavorite && styles.active)}>  
+                    <button onClick={toggle} className={clsx(styles.button, props.isFavorite && styles.active)}> 
                     <span className="fa fa-star-o" /> 
-                    </button>
-                    
-                    {/* <button onClick={remove} className={clsx(styles.remove_button, props.isFavorite && styles.active)}>  </button> */}
-                    {/* <span className="fa fa-trash" />  */}
-                    
+                    </button> 
                 </div> 
+                <div>
+                    <button onClick={remove} className={clsx(styles.remove_button, props.isFavorite && styles.active)}> 
+                    <span className="fa fa-trash" /> 
+                    </button> 
+                </div>
             </div> 
         </li> 
     ); 

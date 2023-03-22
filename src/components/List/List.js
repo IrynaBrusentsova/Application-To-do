@@ -8,10 +8,14 @@ import { useSelector } from 'react-redux';
 // 13.6
 // import {getAllColumns} from '../../redux/store';
 // 14.2 
-import {getListById} from '../../redux/store';
-import {getColumnsByList} from '../../redux/store';
+
+import { getListById } from '../../redux/listsRedux';
+import { getColumnsByList } from '../../redux/columnsReducer';
+
 import { useParams } from "react-router";
 import { Navigate } from "react-router-dom";
+
+
 
 
 const List = () => {
